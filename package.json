@@ -1,20 +1,8 @@
 {
   "name": "real-time-pizza-dilivery-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DevAman-sudo/real-time-pizza-dilivery-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DevAman-sudo/real-time-pizza-dilivery-app/issues"
-  },
-  "homepage": "https://github.com/DevAman-sudo/real-time-pizza-dilivery-app#readme"
+  "repository": "git@github.com:DevAman-sudo/real-time-pizza-dilivery-app.git",
+  "author": "DevAman-sudo <devaman.net@gmail.com>",
+  "license": "MIT"
 }
