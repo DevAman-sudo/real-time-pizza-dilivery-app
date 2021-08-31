@@ -5,3 +5,20 @@ body {
     --webkit-font-smoothing: antialiased;
     color: $dark;
 }
+
+// navbar
+.navbar .logo {
+    width: 4rem;
+    height: 3rem;
+}
+
+.navbar .logo-heading {
+    font-weight: bolder;
+    font-size: 2rem;
+    text-shadow: scale-color($color: $grey, $red: 1, $green: 2, $blue: 3, $saturation: 0%, $lightness: 0%, $alpha: 1.0);
+}
+
+.navbar .cart {
+    width: 3rem;
+    height: 3rem;
+}
