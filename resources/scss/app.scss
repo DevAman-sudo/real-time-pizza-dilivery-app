@@ -15,10 +15,21 @@ body {
 .navbar .logo-heading {
     font-weight: bolder;
     font-size: 2rem;
-    text-shadow: scale-color($color: $grey, $red: 1, $green: 2, $blue: 3, $saturation: 0%, $lightness: 0%, $alpha: 1.0);
 }
 
-.navbar .cart {
-    width: 3rem;
-    height: 3rem;
+nav li a {
+    transition: $smooth;
+    &:hover {
+        color: $primary;
+    }
+}
+
+nav li:last-child a {
+    background-color: $primary;
+    padding: 0.7rem;
+    color: $pure;
+    border-radius: 1rem;
+    &:hover {
+        background-color: $primary-hover;
+    }
 }

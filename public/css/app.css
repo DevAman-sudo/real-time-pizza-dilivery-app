@@ -12,10 +12,21 @@ body {
 .navbar .logo-heading {
   font-weight: bolder;
   font-size: 2rem;
-  text-shadow: royalblue;
 }
 
-.navbar .cart {
-  width: 3rem;
-  height: 3rem;
+nav li a {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover {
+  color: #FE5F1E;
+}
+
+nav li:last-child a {
+  background-color: #FE5F1E;
+  padding: 0.7rem;
+  color: #ffffff;
+  border-radius: 1rem;
+}
+nav li:last-child a:hover {
+  background-color: #b23301;
 }
