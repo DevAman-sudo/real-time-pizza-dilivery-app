@@ -23,10 +23,23 @@ nav li a:hover {
 
 nav li:last-child a {
   background-color: #FE5F1E;
-  padding: 0.7rem;
+  padding: 0.7rem 1rem;
   color: #ffffff;
   border-radius: 1rem;
 }
 nav li:last-child a:hover {
+  background-color: #b23301;
+}
+
+.hero {
+  background-color: #F8F8F8;
+}
+
+.hero .hero-btn {
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 2px;
+  background-color: #FE5F1E;
+}
+.hero .hero-btn:hover {
   background-color: #b23301;
 }

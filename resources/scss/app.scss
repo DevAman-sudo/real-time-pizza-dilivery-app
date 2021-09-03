@@ -26,9 +26,23 @@ nav li a {
 
 nav li:last-child a {
     background-color: $primary;
-    padding: 0.7rem;
+    padding: 0.7rem 1rem;
     color: $pure;
     border-radius: 1rem;
+    &:hover {
+        background-color: $primary-hover;
+    }
+}
+
+// hero section
+.hero {
+    background-color: $secondary;
+}
+
+.hero .hero-btn {
+    transition: $smooth;
+    letter-spacing: 2px;
+    background-color: $primary;
     &:hover {
         background-color: $primary-hover;
     }
