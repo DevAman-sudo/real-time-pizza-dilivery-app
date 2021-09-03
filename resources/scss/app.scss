@@ -47,3 +47,18 @@ nav li:last-child a {
         background-color: $primary-hover;
     }
 }
+
+// menu section
+.size {
+    background: $secondary;
+}
+
+.add-to-cart {
+    border: 2px solid $primary-hover;
+    color: $primary-hover;
+    transition: $smooth;
+    &:hover {
+        background-color: $primary-hover;
+        color: $pure;
+    }
+}

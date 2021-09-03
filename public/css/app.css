@@ -43,3 +43,17 @@ nav li:last-child a:hover {
 .hero .hero-btn:hover {
   background-color: #b23301;
 }
+
+.size {
+  background: #F8F8F8;
+}
+
+.add-to-cart {
+  border: 2px solid #b23301;
+  color: #b23301;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background-color: #b23301;
+  color: #ffffff;
+}
