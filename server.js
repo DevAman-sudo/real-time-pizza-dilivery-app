@@ -17,6 +17,10 @@ app.get('/' , (req , res) => {
     res.render('home');
 });
 
+app.get('/cart' , (req , res) =< {
+    res.render('customers/cart');
+});
+
 // set template engine
 app.set('views' , viewsPath);
 app.set('view engine' , 'ejs');
