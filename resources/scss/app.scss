@@ -39,7 +39,7 @@ nav li:last-child a {
     background-color: $secondary;
 }
 
-.hero .hero-btn {
+.hero-btn {
     transition: $smooth;
     letter-spacing: 2px;
     background-color: $primary;
@@ -61,4 +61,9 @@ nav li:last-child a {
         background-color: $primary-hover;
         color: $pure;
     }
+}
+
+// cart page
+.cart {
+    background-color: $secondary;
 }

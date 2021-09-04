@@ -13,18 +13,18 @@ const staticPath = path.join(__dirname , './public');
 // assets
 app.use(express.static(staticPath));
 
-app.get('/' , (req , res) => {
-    res.render('home');
-});
-
-app.get('/cart' , (req , res) =< {
-    res.render('customers/cart');
-});
-
 // set template engine
 app.set('views' , viewsPath);
 app.set('view engine' , 'ejs');
 app.use(expressLayout);
+
+app.get('/' , (req , res) => {
+    res.render('home');
+});
+
+app.get('/cart' , (req , res) => {
+    res.render('customers/cart');
+});
 
 // listening on server 5000
 app.listen(port , () => {

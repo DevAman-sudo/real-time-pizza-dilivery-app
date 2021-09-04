@@ -35,12 +35,12 @@ nav li:last-child a:hover {
   background-color: #F8F8F8;
 }
 
-.hero .hero-btn {
+.hero-btn {
   transition: all 0.3s ease-in-out;
   letter-spacing: 2px;
   background-color: #FE5F1E;
 }
-.hero .hero-btn:hover {
+.hero-btn:hover {
   background-color: #b23301;
 }
 
@@ -56,4 +56,8 @@ nav li:last-child a:hover {
 .add-to-cart:hover {
   background-color: #b23301;
   color: #ffffff;
+}
+
+.cart {
+  background-color: #F8F8F8;
 }
