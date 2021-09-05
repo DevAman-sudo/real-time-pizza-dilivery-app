@@ -1,4 +1,6 @@
 body {
+  height: auto;
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
   --webkit-font-smoothing: antialiased;
   color: #232323;
@@ -59,5 +61,22 @@ nav li:last-child a:hover {
 }
 
 .cart {
+  min-height: 100vh;
   background-color: #F8F8F8;
+}
+.cart .amount {
+  color: #FE5F1E;
+}
+
+.cart .cart-shop {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+.cart .cart-pizz {
+  width: 7rem;
+  height: 7rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

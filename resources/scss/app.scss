@@ -1,6 +1,8 @@
 @import './var';
 
 body {
+    height: auto;
+    min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     --webkit-font-smoothing: antialiased;
     color: $dark;
@@ -65,5 +67,22 @@ nav li:last-child a {
 
 // cart page
 .cart {
+    min-height: 100vh;
     background-color: $secondary;
+    
+    .amount {
+        color: $primary;
+    }
+}
+
+.cart .cart-shop {
+    background-color: $pure;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+.cart .cart-pizz {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
 }
