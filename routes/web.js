@@ -1,7 +1,10 @@
+// web controllers
+const webControllers = require('../app/http/controllers/homeControllers');
+
 function initRoutes(app) {
-  app.get("/", (req, res) => {
-    res.render("home");
-  });
+
+    // home route
+  app.get("/", webControllers().index );
 
   app.get("/cart", (req, res) => {
     res.render("customers/cart");
