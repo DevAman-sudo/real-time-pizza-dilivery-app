@@ -18,21 +18,8 @@ app.set('views' , viewsPath);
 app.set('view engine' , 'ejs');
 app.use(expressLayout);
 
-app.get('/' , (req , res) => {
-    res.render('home');
-});
-
-app.get('/cart' , (req , res) => {
-    res.render('customers/cart');
-});
-
-app.get('/login' , (req , res) => {
-    res.render('auth/login');
-});
-
-app.get('/register' , (req , res) => {
-    res.render('auth/register');
-});
+// web routes
+require('./routes/web')(app);
 
 // listening on server 5000
 app.listen(port , () => {
