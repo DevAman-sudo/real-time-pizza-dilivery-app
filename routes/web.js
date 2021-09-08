@@ -1,22 +1,20 @@
 // web controllers
-const webControllers = require('../app/http/controllers/homeControllers');
+const homeControllers = require('../app/http/controllers/homeControllers');
+const authControllers = require('../app/http/controllers/authControllers');
+const cartControllers = require('../app/http/controllers/customers/cartControllers');
 
+
+// routes function
 function initRoutes(app) {
 
     // home route
-  app.get("/", webControllers().index );
+  app.get("/", homeControllers().index );
 
-  app.get("/cart", (req, res) => {
-    res.render("customers/cart");
-  });
+  app.get("/cart", cartControllers().index );
 
-  app.get("/login", (req, res) => {
-    res.render("auth/login");
-  });
+  app.get("/login", authControllers().login );
 
-  app.get("/register", (req, res) => {
-    res.render("auth/register");
-  });
+  app.get("/register", authControllers().register );
 }
 
 module.exports = initRoutes;
