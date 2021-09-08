@@ -1,0 +1,54 @@
+{
+    "name": "margherita",
+    "prize": "620",
+    "image": "pizza.png",
+    "size": "small.00"
+},
+{
+    "name": "Classic Corn",
+    "prize": "695.00",
+    "image": "pizza.png",
+    "size": "medium"
+},
+{
+    "name": "Tandoori Onion",
+    "prize": "695.00",
+    "image": "pizza.png",
+    "size": "medium"
+},
+{
+    "name": "Double Cheese",
+    "prize": "745.00",
+    "image": "pizza.png",
+    "size": "large"
+},
+{
+    "name": "Veggie Tandoori",
+    "prize": "745.00",
+    "image": "pizza.png",
+    "size": "large"
+},
+{
+    "name": "Veggie Feast",
+    "prize": "745.00",
+    "image": "pizza.png",
+    "size": "large"
+},
+{
+    "name": "Spiced Paneer",
+    "prize": "745.00",
+    "image": "pizza.png",
+    "size": "medium"
+},
+{
+    "name": "Country Feast",
+    "prize": "845.00",
+    "image": "pizza.png",
+    "size": "large"
+},
+{
+    "name": "Veg Exotica",
+    "prize": "945.00",
+    "image": "pizza.png",
+    "size": "large"
+}

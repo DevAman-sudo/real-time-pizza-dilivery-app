@@ -7,7 +7,7 @@ const cartControllers = require('../app/http/controllers/customers/cartControlle
 // routes function
 function initRoutes(app) {
 
-    // home route
+  // home route
   app.get("/", homeControllers().index );
 
   app.get("/cart", cartControllers().index );
