@@ -1,10 +1,12 @@
 // npm pacakges
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
 const path = require('path');
 const expressLayout = require('express-ejs-layouts');
 const mongoose = require('mongoose');
+const session =require("express-session");
 const port = process.env.PORT || 5000;
 
 // file paths
@@ -24,6 +26,15 @@ mongoose.connect( databaseUrl ,
     }).catch((error) => {
         console.log(`error occured while database connection => ${error}`);
     });
+
+// express session
+app.use( session({
+    secret: process.env.COOKIE_SECRET ,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 1000 * 60 * 60 * 24 }
+}));
+
 
 // assets
 app.use(express.static(staticPath));
