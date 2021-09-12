@@ -8,6 +8,7 @@ const expressLayout = require('express-ejs-layouts');
 const mongoose = require('mongoose');
 const session = require("express-session");
 const flash = require("express-flash");
+const MongoDbStore = require('connect-mongo');
 const port = process.env.PORT || 5000;
 
 // file paths
@@ -33,12 +34,13 @@ app.use( session({
     secret: process.env.COOKIE_SECRET ,
     resave: false,
     saveUninitialized: true,
+    store: MongoDbStore.create({
+        mongoUrl: databaseUrl
+    }),
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
 
 app.use( flash() );
-
-
 
 // assets
 app.use(express.static(staticPath));
