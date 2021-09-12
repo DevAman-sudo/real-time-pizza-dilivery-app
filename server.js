@@ -39,6 +39,7 @@ app.use( session({
 app.use( flash() );
 
 
+
 // assets
 app.use(express.static(staticPath));
 
