@@ -65,6 +65,9 @@ nav li:last-child a {
         background-color: $primary-hover;
         color: $pure;
     }
+    &:focus {
+        outline: none;
+    }
 }
 
 // cart page

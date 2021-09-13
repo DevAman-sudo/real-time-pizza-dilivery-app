@@ -336,6 +336,9 @@ nav li:last-child a:hover {
   background-color: #b23301;
   color: #ffffff;
 }
+.add-to-cart:focus {
+  outline: none;
+}
 
 .cart {
   min-height: 100vh;

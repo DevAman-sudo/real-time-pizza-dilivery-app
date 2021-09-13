@@ -7,22 +7,32 @@ const addToCart = document.querySelectorAll('.add-to-cart');
 const cartCounter = document.querySelector('#cartCounter');
 
 // update cart function
-function updateCart(data) {
-    axios.post('/update-cart' , data).then( res => {
+function updateCart(pizza) {
+    axios.post('/update-cart' , pizza).then( res => {
         cartCounter.innerText = res.data.totalQty;
 
         new Noty({
             type: "success",
             timeout: 1000,
+            layout: 'bottomRight',
             text: "Item added to cart"
           }).show();
-    });
+    }).catch( (error) => {
+
+        new Noty({
+            type: "error",
+            timeout: 1000,
+            layout: 'bottomRight',
+            text: "Something went wrong"
+          }).show();
+
+    })
 }
 
 // add to cart listener 
 addToCart.forEach( (btn) => {
     btn.addEventListener('click' , (event) => {
-        let data = JSON.parse(btn.dataset.pizza);
-        updateCart(data);
+        let pizza = JSON.parse(btn.dataset.pizza);
+        updateCart(pizza);
     });
 });

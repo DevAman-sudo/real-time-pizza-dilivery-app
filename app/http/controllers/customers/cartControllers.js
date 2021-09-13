@@ -25,11 +25,11 @@ function cartControllers() {
                     qty: 1
                 }
                 cart.totalQty = cart.totalQty + 1
-                cart.totalPrice = cart.totalPrice + req.body.price
+                cart.totalPrice = cart.totalPrice + req.body.prize
             } else {
                 cart.items[req.body._id].qty = cart.items[req.body._id].qty + 1
                 cart.totalQty = cart.totalQty + 1
-                cart.totalQty = cart.totalQty + req.body.price
+                cart.totalPrice = cart.totalPrice + req.body.prize
             }
 
 
