@@ -49,6 +49,7 @@ app.use(express.static(staticPath));
 // set template engine
 app.set('views' , viewsPath);
 app.set('view engine' , 'ejs');
+app.use(express.json());
 app.use(expressLayout);
 
 // web routes

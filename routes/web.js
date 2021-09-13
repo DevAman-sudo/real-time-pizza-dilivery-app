@@ -12,6 +12,8 @@ function initRoutes(app) {
 
   app.get("/cart", cartControllers().index );
 
+  app.post("/update-cart", cartControllers().update );
+
   app.get("/login", authControllers().login );
 
   app.get("/register", authControllers().register );
