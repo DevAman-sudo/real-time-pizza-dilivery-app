@@ -30,7 +30,7 @@
         <div class="flex items-center justify-around mt-6">
           <span class="font-bold text-lg">Rs  <%= pizza.prize %></span>
           <button
-            data-pizza="<%= pizza %>"
+            data-pizza="<%= JSON.stringify(pizza) %>"
             class="
               add-to-cart
               py-1

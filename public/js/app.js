@@ -13,7 +13,7 @@ var addToCart = document.querySelectorAll('.add-to-cart'); // add to cart listen
 
 addToCart.forEach(function (btn) {
   btn.addEventListener('click', function (event) {
-    var data = btn.dataset.pizza;
+    var data = JSON.parse(btn.dataset.pizza);
     console.log(data);
   });
 });
