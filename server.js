@@ -16,7 +16,8 @@ const viewsPath = path.join(__dirname , '/resources/views');
 const staticPath = path.join(__dirname , './public');
 
 // mongodb database connection
-const databaseUrl = "mongodb://localhost/pizza";
+// const databaseUrl = "mongodb://localhost/pizza";
+const databaseUrl = `mongodb+srv://DevAman:${process.env.PASS}@cluster0.tlrz1.mongodb.net/pizza?retryWrites=true&w=majority`;
 mongoose.connect( databaseUrl ,
     {
         useNewUrlParser: true,
