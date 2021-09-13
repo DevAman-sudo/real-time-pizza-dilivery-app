@@ -7,7 +7,16 @@
   \*****************************/
 /***/ (() => {
 
+// imported packages
+// dom elements
+var addToCart = document.querySelectorAll('.add-to-cart'); // add to cart listener 
 
+addToCart.forEach(function (btn) {
+  btn.addEventListener('click', function (event) {
+    var data = btn.dataset.pizza;
+    console.log(data);
+  });
+});
 
 /***/ }),
 
