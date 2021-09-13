@@ -52,6 +52,12 @@ app.set('view engine' , 'ejs');
 app.use(express.json());
 app.use(expressLayout);
 
+// global middlewares
+app.use( (req , res , next) => {
+    res.locals.session = req.session;
+    next();
+})
+
 // web routes
 require('./routes/web')(app);
 
