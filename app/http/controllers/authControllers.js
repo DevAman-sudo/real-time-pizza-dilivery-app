@@ -1,19 +1,20 @@
+const bcrypt = require("bcrypt");
 const User = require("../../models/user");
 
 function authControllers() {
 
     return {
-        login(req , res) {
+        login(_req , res) {
             res.render('auth/login');
         },
 
-        register(req , res) {
+        register(_req , res) {
             res.render('auth/register');
         },
 
-        postRegister(req , res) {
+        async postRegister(req , res) {
 
-            const { name , email , password } = req.body;
+            const { username , email , password } = req.body;
 
             User.exists({ email: email }, (err , result) => {
                 if (result) {
@@ -24,16 +25,22 @@ function authControllers() {
             })
 
             // hashing password
-            
+            const hashedPassword = await bcrypt.hash(password , 10);
 
             // create user
             const user = new User({
-                name: name,
-                email: email,
-                password: password
+                username,
+                email,
+                password: hashedPassword
             })
 
-            res.send('success')
+            user.save().then((user) => {
+                res.redirect('/');
+            }).catch((error) => {
+                req.flash('error' , 'Something went wrong');
+                console.log(error)
+                res.redirect('/register');
+            })
 
         }
     }
