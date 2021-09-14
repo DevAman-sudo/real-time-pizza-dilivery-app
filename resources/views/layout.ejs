@@ -46,15 +46,31 @@
           <li class="ml-6">
             <a href="#">offers</a>
           </li>
+
+          <% if (user) { %>
+
+          <li class="ml-6">
+            <form id="logout" action="/logout" method="post">
+              <a onclick="document.getElementById('logout').submit()" href="#">logout</a>
+            </form>
+          </li>
+
+          <% } else { %>
+
           <li class="ml-6">
             <a href="/register">register</a>
           </li>
           <li class="ml-6">
             <a href="/login">login</a>
           </li>
+
+          <% } %>
+
           <li class="ml-9">
             <a class="flex items-center justify-between" href="cart">
-              <span id="cartCounter" class="text-white font-bold pr-2"><%= session.cart ? session.cart.totalQty : '' %></span>
+              <span id="cartCounter" class="text-white font-bold pr-2"
+                ><%= session.cart ? session.cart.totalQty : '' %></span
+              >
               <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
             </a>
           </li>

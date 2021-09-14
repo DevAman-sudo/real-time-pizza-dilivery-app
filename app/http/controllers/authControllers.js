@@ -1,14 +1,40 @@
 const bcrypt = require("bcrypt");
+const passport = require("passport");
 const User = require("../../models/user");
 
 function authControllers() {
 
     return {
-        login(_req , res) {
+        login(req , res) {
             res.render('auth/login');
         },
 
-        register(_req , res) {
+        postLogin(req , res , next) {
+            passport.authenticate('local' , (err , user , info) => {
+
+                if (err) {
+                    req.flash("error" , info.message);
+                    return next(err);
+                }
+
+                if (!user) {
+                    req.flash("error" , info.message);
+                    return res.redirect("/login");
+                }
+
+                req.logIn( user , (err) => {
+                    if(err) {
+                        req.flash("error" , info.message);
+                        return next(err);
+                    }
+
+                    return res.redirect('/');
+                });
+
+            })(req , res , next);
+        },
+
+        register(req , res) {
             res.render('auth/register');
         },
 
@@ -42,6 +68,11 @@ function authControllers() {
                 res.redirect('/register');
             })
 
+        },
+
+        logout(req , res) {
+            req.logout();
+            return res.redirect('/login');
         }
     }
 
