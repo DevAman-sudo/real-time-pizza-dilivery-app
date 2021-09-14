@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const session = require("express-session");
 const flash = require("express-flash");
 const MongoDbStore = require('connect-mongo');
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 
 // file paths
 const viewsPath = path.join(__dirname , '/resources/views');
@@ -41,7 +41,7 @@ app.use( session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }));
 
-app.use( flash() );
+app.use(flash());
 
 // assets
 app.use(express.static(staticPath));
@@ -49,6 +49,7 @@ app.use(express.static(staticPath));
 // set template engine
 app.set('views' , viewsPath);
 app.set('view engine' , 'ejs');
+app.use(express.urlencoded({ extended : false }));
 app.use(express.json());
 app.use(expressLayout);
 
