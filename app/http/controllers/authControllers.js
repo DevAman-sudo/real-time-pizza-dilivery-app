@@ -10,6 +10,15 @@ function authControllers() {
         },
 
         postLogin(req , res , next) {
+
+            // remove commentes if you want your own validation in login form and remove html deafult required
+            // const {email , password} = req.body; 
+
+            // if (!email || !password) {
+            //     req.flash("error" , "All fields are required");
+            //     res.redirect("/login");
+            // }
+
             passport.authenticate('local' , (err , user , info) => {
 
                 if (err) {
