@@ -26,7 +26,10 @@ function initRoutes(app) {
 
   app.post("/logout", authControllers().logout);
 
+  // customers routes
   app.post("/order", orderControllers().store);
+
+  app.get("/customer/orders", orderControllers().index);
 }
 
 module.exports = initRoutes;

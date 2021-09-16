@@ -1,9 +1,9 @@
 [
     {
         "name": "margherita",
-        "prize": "620",
+        "prize": "620.00",
         "image": "pizza.png",
-        "size": "small.00"
+        "size": "small"
     },
     {
         "name": "Classic Corn",
