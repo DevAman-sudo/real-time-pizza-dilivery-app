@@ -4,7 +4,7 @@ const app = express();
 const ejs = require("ejs");
 const path = require("path");
 const expressLayout = require("express-ejs-layouts");
-const PORT = process.env.PORT || 3300;
+const PORT = process.env.PORT || 8080;
 const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("express-flash");
@@ -13,11 +13,12 @@ const passport = require("passport");
 const Emitter = require("events");
 
 // Database connection
-mongoose.connect(process.env.MONGO_CONNECTION_URL, {
+const pass = process.env.PASS;
+mongoose.connect(`mongodb+srv://DevAman:${pass}@cluster0.tlrz1.mongodb.net/pizza?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useCreateIndex: true,
-  //    useUnifiedTopology: true,
-  // useFindAndModify : true
+  useUnifiedTopology: true,
+  useFindAndModify : true
 });
 const connection = mongoose.connection;
 connection
