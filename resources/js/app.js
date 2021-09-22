@@ -1,6 +1,8 @@
 // imported packages
 import axios from "axios";
 import Noty from "noty";
+import moment from "moment";
+import { initAdmin } from "./adminDemo";
 
 // dom elements
 const addToCart = document.querySelectorAll('.add-to-cart');
@@ -46,3 +48,5 @@ if (alertMsg) {
     }, 2000);
     location.reload();
 }
+
+initAdmin()
