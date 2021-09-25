@@ -14,12 +14,13 @@ const Emitter = require("events");
 
 // Database connection
 const pass = process.env.PASS;
-mongoose.connect(`mongodb+srv://DevAman:${pass}@cluster0.tlrz1.mongodb.net/pizza?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://spydev:${pass}@cluster0.tlrz1.mongodb.net/pizza?retryWrites=true&w=majority`, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
   useFindAndModify : true
 });
+
 const connection = mongoose.connection;
 connection
   .once("open", () => {
